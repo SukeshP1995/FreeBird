@@ -1,0 +1,51 @@
+.line1 {
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-dasharray: 0, 15;
+    stroke-dashoffset: 5;
+  }
+
+.middle_first_half{
+  margin-left: 10px;
+  width: 97%;
+  height: 300px;
+  border-radius: 25px;
+  background: #F58D74;
+}
+
+.middle_second_half{
+    margin-right: 0px;
+    margin-left:10px;
+    width: 97%;
+    height: 300px;
+    border-radius: 25px;
+    background: #56C4C5;
+}
+
+.btn-primary1 {
+    color: #fff;
+    background-color: #ED403C;
+    border-color: #F58D74;
+}
+
+.btn-primary2 {
+    color: #fff;
+    background-color: #00ACAC;
+    border-color: #56C4C5;
+}
+
+.first-half{
+stroke: #ED403C;
+}
+
+.second-half{
+stroke: #00ACAC;
+}
+
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+
+.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
+}

@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% block body %}
+    <div class="container">
+        <div class="col-md-8">
+            <form method="post" id="login_forum">
+                {{username_error}}
+                <div>
+                    <label>Username</label>
+                    <input type="text" class="form-control" name="username" id="form_uname">
+                    <div class="invalid-feedback" id="error-username">not valid</div>
+                    <div class="invalid-feedback">{{username_error}}</div>
+                </div>
+                {{password_error}}
+                <div>
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password" id="form_psd">
+                    <div class="invalid-feedback" id="error-password">not valid</div>
+                    <div class="invalid-feedback">{{password_error}}</div>
+                </div>
+
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit" value="Login">Login</button>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

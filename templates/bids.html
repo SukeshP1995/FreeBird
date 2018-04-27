@@ -1,0 +1,61 @@
+{% extends 'index.html' %}
+{% block body %}
+    <div align="center">
+       <h2 >Jobs Available</h2>
+    </div>
+    <div class="container" style="background-color: #f4f6f6">
+
+        {% for post in posts %}
+
+        <div class="row mt-3">
+            <div class="col-md-12" style="background-color:#d6dbdf ; border-radius: 10px" >
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5> {{ post.post_title }} </h5>
+                    </div>
+                    <div class="col-md-6" align="left">
+                        <h6> {{ post.post_date.strftime("%Y/%m/%d %H:%M") }} </h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p> {{ post.post_details }} </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>by: {{ post.username }} </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p style="color: blue">min bid: {{ post.min_bid }} </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="color: blue">max bid: {{ post.max_bid }} </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p style="color: green">start date: {{ post.start_date }} </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="color: red">end date: {{ post.end_date }} </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <form action="" method="post">
+                            <input type="text" placeholder="enter bid value" name="amount"><br><br>
+                            <input name="post_id" type="hidden" value="{{ post.key().id_or_name() }}">
+                            <input type="submit" class="btn btn-success btn-sm" value="bid" style="border-radius: 2px">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
