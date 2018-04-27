@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+{% block body %}
+    <div class="container">
+        <div class="col-md-8">
+            <form id="post_form" method="post">
+
+
+                <div>
+                    <label>Title</label>
+                    <input type="text" class="form-control" name="title" id="form_title" placeholder="Enter Title">
+                    <div class="invalid-feedback" id="error-title">not valid</div>
+                </div>
+
+                <div>
+                    <label>Description</label>
+                    <textarea class="form-control z-depth-1" name="description" rows="5" placeholder="Please type your post here" id ="form_description"></textarea>
+                    <div class="invalid-feedback" id="error-description">not valid</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Start Date</label>
+                    <input class="form-control" id="form_start_date" name="start_date" placeholder="MM/DD/YYYY" type="text"/>
+                    <div class="invalid-feedback" id="error-startdate">not valid</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">End Date</label>
+                    <input class="form-control" id="form_end_date" name="end_date" placeholder="MM/DD/YYYY" type="text"/>
+                    <div class="invalid-feedback" id="error-enddate">not valid</div>
+                </div>
+
+                <div>
+                    <label>Min Bid</label>
+                    <input type="text" class="form-control" name="min_bid" id="form_min_bid" placeholder="0">
+                    <div class="invalid-feedback" id="error-minbid">not valid</div>
+                </div>
+
+                <div>
+                    <label>Max Bid</label>
+                    <input type="text" class="form-control" name="max_bid" id="form_max_bid" placeholder="0">
+                    <div class="invalid-feedback" id="error-maxbid">not valid</div>
+                </div>
+
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit" value="Post">Post</button>
+
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}
